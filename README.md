@@ -7,6 +7,14 @@ are needed for this polling example. It echoes text in private chats only.
 Russian guide: [VPS для Telegram-бота](https://motsell.com/ru/guides/vps-dlya-bota?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_ru).
 English guide: [VPS for a Telegram bot](https://motsell.com/en/guides/vps-for-bots?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_en).
 
+### Перенос уже работающего бота
+
+Если у вас уже есть один Python-бот на Linux с long polling и локальной SQLite
+(или без базы), [проверьте условия пилота переноса на VPS MOTSELL](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=migration_pilot#request).
+В пилоте до трёх подходящих проектов: разовый перенос, настройка автозапуска и
+проверка после переключения. Возможность переноса подтверждаем до оплаты VPS;
+вебхуки и доработка кода не входят. Не передавайте токен или данные бота в GitHub.
+
 ## Install on your own server
 
 Use a separate test bot created with BotFather. An existing webhook is detected
