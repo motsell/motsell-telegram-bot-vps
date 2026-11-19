@@ -89,6 +89,10 @@ Check actual Telegram connectivity and service startup on your own test server.
 MOTSELL provides the VPS and its management. The customer maintains the
 application, updates, secrets and backups unless separately agreed.
 
+## License
+
+MIT. See [LICENSE](LICENSE).
+
 ## Sources
 
 - https://core.telegram.org/bots/api#getupdates
