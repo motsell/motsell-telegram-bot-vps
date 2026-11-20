@@ -7,6 +7,8 @@ are needed for this polling example. It echoes text in private chats only.
 Russian guide: [VPS для Telegram-бота](https://motsell.com/ru/guides/vps-dlya-bota?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_ru).
 English guide: [VPS for a Telegram bot](https://motsell.com/en/guides/vps-for-bots?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_en).
 
+Need a server before installing? [Current VPS plans (EN)](https://motsell.com/en/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_en#order) · [Тарифы VPS (RU)](https://motsell.com/ru/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_ru#order). Choose a configuration for your own bot's requirements and check the required country and Telegram connectivity before deployment.
+
 ### Перенос уже работающего бота
 
 Если у вас уже есть один Python-бот на Linux с long polling и локальной SQLite
