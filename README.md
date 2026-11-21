@@ -9,6 +9,10 @@ English guide: [VPS for a Telegram bot](https://motsell.com/en/guides/vps-for-bo
 
 Need a server before installing? [Current VPS plans (EN)](https://motsell.com/en/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_en#order) · [Тарифы VPS (RU)](https://motsell.com/ru/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_ru#order). Choose a configuration for your own bot's requirements and check the required country and Telegram connectivity before deployment.
 
+### Moving an existing bot from Railway?
+
+[Rehearse a Railway SQLite export and restore on Linux](docs/railway-sqlite-migration.md). The local test shows how a stale copy can pass `integrity_check`, and what to verify before switching pollers.
+
 ### Перенос уже работающего бота
 
 Если у вас уже есть один Python-бот на Linux с long polling и локальной SQLite
