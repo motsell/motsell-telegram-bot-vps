@@ -17,6 +17,8 @@ Need a server before installing? [Current VPS plans (EN)](https://motsell.com/en
 проверка после переключения. Возможность переноса подтверждаем до оплаты VPS;
 вебхуки и доработка кода не входят. Не передавайте токен или данные бота в GitHub.
 
+[Как забрать SQLite с Railway перед переносом — проверка копии на стенде](docs/railway-sqlite-migration.ru.md).
+
 ## Install on your own server
 
 Use a separate test bot created with BotFather. An existing webhook is detected
