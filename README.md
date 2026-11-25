@@ -13,6 +13,8 @@ Run them with `python3 -m unittest discover -v` from the repository root.
 Moving an existing bot? The [Railway SQLite migration rehearsal](docs/railway-sqlite-migration.md)
 shows how two database copies can pass `integrity_check` while only one contains
 the latest committed update. [Русская версия](docs/railway-sqlite-migration.ru.md).
+Run `python3 -m unittest -v test_migration.py` to reproduce the lost update
+and verify a fresh rollback snapshot with synthetic data.
 
 ## Install on your own server
 
