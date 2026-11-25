@@ -1,27 +1,18 @@
-# Telegram bot on a Linux VPS
+# Telegram polling bot for Linux
+
+An echo bot for private Telegram chats, written entirely with the Python
+standard library. It saves the polling offset across restarts and runs as an
+unprivileged systemd service. No pip packages, public HTTP port, domain or
+certificate are needed.
 
 Use Python 3.11+ with current security updates, or a Python version still
-security-maintained by your Linux distribution, and systemd. No pip packages, public HTTP port, domain or certificate
-are needed for this polling example. It echoes text in private chats only.
+security-maintained by your Linux distribution, and systemd. The included
+tests use mocked Telegram responses; they need neither a bot token nor a server.
+Run them with `python3 -m unittest discover -v` from the repository root.
 
-Russian guide: [VPS для Telegram-бота](https://motsell.com/ru/guides/vps-dlya-bota?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_ru).
-English guide: [VPS for a Telegram bot](https://motsell.com/en/guides/vps-for-bots?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_en).
-
-Need a server before installing? [Current VPS plans (EN)](https://motsell.com/en/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_en#order) · [Тарифы VPS (RU)](https://motsell.com/ru/vps-vds?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=readme_plan_ru#order). Choose a configuration for your own bot's requirements and check the required country and Telegram connectivity before deployment.
-
-### Moving an existing bot from Railway?
-
-[Rehearse a Railway SQLite export and restore on Linux](docs/railway-sqlite-migration.md). The local test shows how a stale copy can pass `integrity_check`, and what to verify before switching pollers.
-
-### Перенос уже работающего бота
-
-Если у вас уже есть один Python-бот на Linux с long polling и локальной SQLite
-(или без базы), [проверьте условия пилота переноса на VPS MOTSELL](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=migration_pilot#request).
-В пилоте до трёх подходящих проектов: разовый перенос, настройка автозапуска и
-проверка после переключения. Возможность переноса подтверждаем до оплаты VPS;
-вебхуки и доработка кода не входят. Не передавайте токен или данные бота в GitHub.
-
-[Как забрать SQLite с Railway перед переносом — проверка копии на стенде](docs/railway-sqlite-migration.ru.md).
+Moving an existing bot? The [Railway SQLite migration rehearsal](docs/railway-sqlite-migration.md)
+shows how two database copies can pass `integrity_check` while only one contains
+the latest committed update. [Русская версия](docs/railway-sqlite-migration.ru.md).
 
 ## Install on your own server
 
@@ -102,9 +93,6 @@ restart offset recovery, API error handling and secret-safe error messages.
 They do not send real Telegram messages or prove your server's network route.
 Check actual Telegram connectivity and service startup on your own test server.
 
-MOTSELL provides the VPS and its management. The customer maintains the
-application, updates, secrets and backups unless separately agreed.
-
 ## License
 
 MIT. See [LICENSE](LICENSE).
@@ -115,3 +103,10 @@ MIT. See [LICENSE](LICENSE).
 - https://core.telegram.org/bots/api#getwebhookinfo
 - https://www.freedesktop.org/software/systemd/man/latest/systemd.exec.html
 - https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html
+
+## Maintainer
+
+MOTSELL Engineering maintains this example. You can run it on any compatible
+Linux host. For server selection and deployment, see our [VPS guide for Telegram bots](https://motsell.com/en/guides/vps-for-bots?utm_source=github&utm_medium=repository&utm_campaign=telegram_bot_example_20261119&utm_content=maintainer_guide).
+MOTSELL provides unmanaged VPS hosting; the customer is responsible for the
+application, updates, secrets and backups unless separately agreed.
