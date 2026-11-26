@@ -34,6 +34,8 @@ sqlite3 -batch -bail -readonly /data/bot.db '.backup /private-export/bot.sqlite3
 
 Если новый экземпляр уже записал данные, старый файл устарел. На стенде запись №43 была только у нового процесса. Возврат к старому файлу её бы потерял. Для отката остановите новый процесс и сначала сверяйте изменения в базе и внешние действия. Например, вызов `getUpdates` с увеличенным offset может подтвердить обновления: повторная доставка после возврата старой базы не гарантируется.
 
-Пилот MOTSELL открыт для работающих Python-ботов с long polling, SQLite или без базы. Если код и состояние можно экспортировать, [проверьте условия переноса до оплаты VPS](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=repository&utm_campaign=railway_sqlite_migration_20261121&utm_content=migration_pilot#request). В первой заявке достаточно описания, без токена и базы.
+Если у вас уже есть Linux VPS, [запросите предварительную оценку переноса](https://motsell.com/ru/perenos-telegram-bota?pilot=client-owned&utm_source=github&utm_medium=repository&utm_campaign=railway_sqlite_migration_20261121&utm_content=migration_pilot#request). Достаточно описать работающего Python-бота с long polling и указать, хранит ли он данные в SQLite. Оставьте токен и файлы базы у себя.
+
+Если сервер ещё не выбран, [проверьте условия пилота с VPS MOTSELL](https://motsell.com/ru/perenos-telegram-bota?utm_source=github&utm_medium=repository&utm_campaign=railway_sqlite_migration_20261121&utm_content=migration_pilot#request).
 
 [SQLite Backup API](https://www.sqlite.org/backup.html) · [SQLite WAL и копирование файлов](https://www.sqlite.org/wal.html#the_wal_file) · [Telegram Bot API: getUpdates](https://core.telegram.org/bots/api#getupdates)
